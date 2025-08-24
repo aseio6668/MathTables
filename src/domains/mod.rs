@@ -34,6 +34,11 @@ pub mod tpe;
 pub mod biology;
 pub mod silicone;
 pub mod smbo_tpe;
+pub mod cosmology;
+pub mod astronomy;
+pub mod ai_learning;
+pub mod language_processing;
+pub mod aetheria;
 
 pub use crate::core::traits::MathDomain;
 
@@ -73,3 +78,8 @@ pub use tpe::TPEDomain;
 pub use biology::BiologyDomain;
 pub use silicone::SiliconeDomain;
 pub use smbo_tpe::SMBOTPEDomain;
+pub use cosmology::CosmologyDomain;
+pub use astronomy::AstronomyDomain;
+pub use ai_learning::AILearningDomain;
+pub use language_processing::LanguageProcessingDomain;
+pub use aetheria::AetheriaDSL;

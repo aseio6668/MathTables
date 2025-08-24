@@ -44,6 +44,11 @@ pub mod prelude {
     pub use crate::domains::biology::*;
     pub use crate::domains::silicone::*;
     pub use crate::domains::smbo_tpe::*;
+    pub use crate::domains::cosmology::*;
+    pub use crate::domains::astronomy::*;
+    pub use crate::domains::ai_learning::*;
+    pub use crate::domains::language_processing::*;
+    pub use crate::domains::aetheria::*;
     pub use crate::plugins::PluginRegistry;
     pub use crate::utils::*;
 }

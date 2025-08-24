@@ -50,7 +50,7 @@ pub struct Point2D {
     pub y: f64,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, Serialize, Deserialize)]
 pub struct Point3D {
     pub x: f64,
     pub y: f64,
@@ -63,7 +63,7 @@ pub struct Vector2D {
     pub y: f64,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, Serialize, Deserialize)]
 pub struct Vector3D {
     pub x: f64,
     pub y: f64,
@@ -601,4 +601,165 @@ pub struct ReceptorBinding {
     pub bmax: f64,                       // Maximum binding capacity
     pub hill_coefficient: f64,           // Cooperativity
     pub ec50: f64,                       // Half-maximum effective concentration
+}
+
+// =============================================================================
+// AETHERIA FRAMEWORK: Symbolic DSL for Cosmic AI Reasoning
+// =============================================================================
+
+/// Symbolic agent representing a cosmic intelligence (star, mind, node)
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct CosmicAgent {
+    pub id: String,
+    pub position: Point3D,
+    pub velocity: Vector3D,
+    pub mass: f64,                      // Symbolic mass (attention/importance)
+    pub spin: f64,                      // Angular momentum (processing rate)
+    pub memory: Tensor,                 // Memory tensor
+    pub resonance: Vec<Symbol>,         // Symbolic resonance frequencies
+    pub energy_level: f64,              // Current energy state
+    pub entropy: f64,                   // Information entropy
+}
+
+/// Symbolic representation in Aetheria
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub enum Symbol {
+    Archetype(String),                  // Mythic archetype
+    ColorWave(Vec<f64>),               // Color as wave representation
+    MythicVector(Vec<f64>),            // N-dimensional symbolic vector
+    EntropyNode(f64),                  // Entropy value as symbol
+    QuantumState(Complex64),           // Quantum superposition state
+    Embedding(Vec<f64>),               // Language embedding vector
+    Resonance(f64, f64),               // Frequency and amplitude
+}
+
+/// Knowledge field with topological properties
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct MythicTopology {
+    pub name: String,
+    pub dimension: usize,
+    pub curvature: f64,                // Spacetime curvature (learning difficulty)
+    pub entropy: f64,                  // Information entropy
+    pub symbols: Vec<Symbol>,          // Symbolic content
+    pub potential: Vec<f64>,           // Potential field values
+    pub connections: Vec<(usize, usize, f64)>, // Node connections with weights
+}
+
+/// Tensor representation for memory and embeddings
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub struct Tensor {
+    pub data: Vec<f64>,
+    pub shape: Vec<usize>,
+    pub strides: Vec<usize>,
+}
+
+/// Attention mechanism parameters
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct AttentionField {
+    pub query_dim: usize,
+    pub key_dim: usize,
+    pub value_dim: usize,
+    pub heads: usize,
+    pub dropout_rate: f64,
+    pub temperature: f64,              // Softmax temperature
+}
+
+/// Transformer architecture parameters
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct TransformerConfig {
+    pub vocab_size: usize,
+    pub embedding_dim: usize,
+    pub hidden_dim: usize,
+    pub num_layers: usize,
+    pub num_heads: usize,
+    pub max_sequence_length: usize,
+    pub dropout_rate: f64,
+}
+
+/// Cosmological parameters
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct CosmologyParams {
+    pub hubble_constant: f64,          // km/s/Mpc
+    pub omega_matter: f64,             // Matter density parameter
+    pub omega_lambda: f64,             // Dark energy density parameter
+    pub omega_radiation: f64,          // Radiation density parameter
+    pub age_universe: f64,             // Age in years
+    pub cmb_temperature: f64,          // Cosmic microwave background temp (K)
+}
+
+/// Stellar properties for astronomical calculations
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct StellarProperties {
+    pub mass: f64,                     // Solar masses
+    pub radius: f64,                   // Solar radii
+    pub luminosity: f64,               // Solar luminosities
+    pub temperature: f64,              // Effective temperature (K)
+    pub metallicity: f64,              // [Fe/H] metallicity
+    pub age: f64,                      // Age in years
+    pub spectral_type: String,         // Spectral classification
+}
+
+/// Orbital elements for celestial mechanics
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct OrbitalElements {
+    pub semi_major_axis: f64,          // a (AU or km)
+    pub eccentricity: f64,             // e
+    pub inclination: f64,              // i (radians)
+    pub longitude_ascending_node: f64,  // Ω (radians)
+    pub argument_periapsis: f64,       // ω (radians)
+    pub mean_anomaly: f64,             // M (radians)
+    pub epoch: f64,                    // Reference time
+}
+
+/// Gravitational wave parameters
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct GravitationalWave {
+    pub frequency: f64,                // Hz
+    pub amplitude: f64,                // Dimensionless strain
+    pub polarization: (f64, f64),      // Plus and cross polarizations
+    pub source_distance: f64,          // Mpc
+    pub chirp_mass: f64,               // Solar masses
+    pub phase: f64,                    // Radians
+}
+
+/// Learning rate schedules for optimization
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub enum LearningSchedule {
+    Constant(f64),
+    Exponential { initial: f64, decay: f64 },
+    Cosine { initial: f64, min_rate: f64 },
+    Polynomial { initial: f64, power: f64 },
+    WarmupCosine { warmup_steps: usize, max_rate: f64, min_rate: f64 },
+}
+
+/// Optimization algorithm parameters
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct OptimizerConfig {
+    pub algorithm: String,             // "adam", "sgd", "rmsprop", etc.
+    pub learning_rate: f64,
+    pub momentum: f64,
+    pub beta1: f64,                    // Adam beta1
+    pub beta2: f64,                    // Adam beta2
+    pub epsilon: f64,                  // Numerical stability
+    pub weight_decay: f64,             // L2 regularization
+}
+
+/// Symbolic force in the Aetheria framework
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct SymbolicForce {
+    pub magnitude: f64,
+    pub direction: Vector3D,
+    pub symbol_type: Symbol,
+    pub influence_radius: f64,
+    pub decay_rate: f64,
+}
+
+/// Time evolution parameters for symbolic dynamics
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct TimeEvolution {
+    pub dt: f64,                       // Time step
+    pub current_time: f64,             // Current simulation time
+    pub total_time: f64,               // Total simulation duration
+    pub adaptive: bool,                // Adaptive time stepping
+    pub tolerance: f64,                // Error tolerance for adaptive stepping
 }
