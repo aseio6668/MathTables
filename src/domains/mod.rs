@@ -39,6 +39,14 @@ pub mod astronomy;
 pub mod ai_learning;
 pub mod language_processing;
 pub mod aetheria;
+pub mod temporal_logic;
+pub mod game_theory;
+pub mod differential_equations;
+pub mod stochastic_processes;
+pub mod time_series;
+pub mod information_theory;
+pub mod chaos_dynamics;
+pub mod computational_math;
 
 pub use crate::core::traits::MathDomain;
 
@@ -83,3 +91,11 @@ pub use astronomy::AstronomyDomain;
 pub use ai_learning::AILearningDomain;
 pub use language_processing::LanguageProcessingDomain;
 pub use aetheria::AetheriaDSL;
+pub use temporal_logic::TemporalLogicDomain;
+pub use game_theory::GameTheoryDomain;
+pub use differential_equations::DifferentialEquationsDomain;
+pub use stochastic_processes::StochasticProcessesDomain;
+pub use time_series::TimeSeriesDomain;
+pub use information_theory::InformationTheoryDomain;
+pub use chaos_dynamics::ChaosDynamicsDomain;
+pub use computational_math::ComputationalMathDomain;

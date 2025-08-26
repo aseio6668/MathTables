@@ -49,6 +49,14 @@ pub mod prelude {
     pub use crate::domains::ai_learning::*;
     pub use crate::domains::language_processing::*;
     pub use crate::domains::aetheria::*;
+    pub use crate::domains::temporal_logic::*;
+    pub use crate::domains::game_theory::*;
+    pub use crate::domains::differential_equations::*;
+    pub use crate::domains::stochastic_processes::*;
+    pub use crate::domains::time_series::*;
+    pub use crate::domains::information_theory::*;
+    pub use crate::domains::chaos_dynamics::*;
+    pub use crate::domains::computational_math::*;
     pub use crate::plugins::PluginRegistry;
     pub use crate::utils::*;
 }
